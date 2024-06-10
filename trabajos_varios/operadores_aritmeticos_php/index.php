@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!--link rel="stylesheet" href="css/style.css" -->
-  <!--link rel="stylesheet" href="css/style2.css" -->
-  <!--link rel="shortcut icon" href="img/file-code-solid.svg" type="image/x-icon"-->
-  <title>Operaciones Básicas</title>
+  <link rel="stylesheet" href="css/style.css" -->
+  <link rel="stylesheet" href="css/style2.css" -->
+  <link rel="shortcut icon" href="img/file-code-solid.svg" type="image/x-icon"-->
+  <title>Operaciones y HTML 5</title>
 </head>
   <body>
 
