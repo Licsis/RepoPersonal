@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="css/style.css" -->
-  <link rel="stylesheet" href="css/style2.css" -->
-  <link rel="shortcut icon" href="img/file-code-solid.svg" type="image/x-icon"-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style2.css">
+  <link rel="shortcut icon" href="img/file-code-solid.svg" type="image/x-icon">
+
   <title>Operaciones y HTML 5</title>
 </head>
   <body>
@@ -104,10 +105,71 @@
           <img src="img/CheatSheet-html5-1.png" alt="Hoja Trucos - HMTL 5 - 1"> 
           <img src="img/CheatSheet-html5-2.png" alt="Hoja Trucos - HMTL 5 - 2">
         </div>
-          
-
-
       </fieldset>
     </div>
+    <hr>
+    <div >
+      <fieldset>
+        <legend>Tablas y Busquedas</legend>
+          <div id="buscador">
+            <div id="idBuscador">
+              <input type="text" id="searchInput" placeholder="Buscar...">
+            </div>
+          </div>
+          <table id="dataTable">
+              <thead>
+                  <tr>
+                      <th>Nombre</th>
+                      <th>Apellido</th>
+                      <th>Edad</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>Juan</td>
+                      <td>Pérez</td>
+                      <td>30</td>
+                  </tr>
+                  <tr>
+                      <td>María</td>
+                      <td>Gómez</td>
+                      <td>25</td>
+                  </tr>
+                  <tr>
+                      <td>Pedro</td>
+                      <td>López</td>
+                      <td>40</td>
+                  </tr>
+                  <tr>
+                      <td>Pedro</td>
+                      <td>López</td>
+                      <td>40</td>
+                  </tr>
+                  <tr>
+                      <td>Pedro</td>
+                      <td>López</td>
+                      <td>42</td>
+                  </tr>
+                  <tr>
+                      <td>Pedro</td>
+                      <td>López</td>
+                      <td>43</td>
+                  </tr>
+                  <tr>
+                      <td>Pedro</td>
+                      <td>López</td>
+                      <td>44</td>
+                  </tr>
+                  <tr>
+                      <td>Pedro</td>
+                      <td>López</td>
+                      <td>45</td>
+                  </tr>
+              </tbody>
+          </table>
+      </fieldset>
+
+    </div>
+    <script src="js/script.js"></script>
   </body>
 </html>
