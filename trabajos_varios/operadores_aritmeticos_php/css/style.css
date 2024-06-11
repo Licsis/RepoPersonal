@@ -37,18 +37,14 @@ h2, h3 {
 #buscador {
   display: flex;
   justify-content:right;
- 
-
-  width: 100%;
-  
+    
 }
-#idBuscador{
+.idBuscador{
   padding: 10px;
-  width: 15%;
+  width: 100%;
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 20px;
-  margin-right: 3%;
 }
 
 table {
@@ -60,8 +56,18 @@ th, td {
   padding: 10px;
   text-align: left;
   border-bottom: 1px solid #dddddd;
+  text-align: center;
 }
-tr.highlight {
-  background-color: yellow;
+tr {
+  text-align: center;
+}
+.flex-container {
+  display: flex;
+  flex-direction: row; /* Dirección principal es horizontal */
+  justify-content: flex-start; /* Alinea los elementos al principio */
+  align-items: center; /* Alinea los elementos al centro del contenedor */
+}
+#titulo{
+  text-align: center;
 }
 /* FINAL - BUSQUEDA EN TABLA */

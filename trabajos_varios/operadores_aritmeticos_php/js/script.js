@@ -20,3 +20,24 @@ document.getElementById('searchInput').addEventListener('keyup', function() {
         }
     }
 });
+
+//ENUMERO LAS TABLAS DE UN  REGISTRO.
+document.addEventListener('DOMContentLoaded', function () {
+    // Seleccionar la tabla y el cuerpo de la tabla
+    const tabla = document.getElementById('dataTable');
+    const cuerpoTabla = tabla.querySelector('tbody');
+
+    // Seleccionar todas las filas del cuerpo de la tabla
+    const filas = cuerpoTabla.getElementsByTagName('tr');
+
+    // Iterar sobre las filas para enumerarlas
+    for (let i = 0; i < filas.length; i++) {
+        // Crear una nueva celda para el número de registro
+        const celdaNumero = filas[i].getElementsByTagName('td')[0];
+        celdaNumero.textContent = i + 1;
+    }
+
+    // Mostrar el número total de registros
+    const totalRegistros = filas.length;
+    document.getElementById('total-registros').textContent = `Total de registros: ${totalRegistros}`;
+});
