@@ -87,7 +87,7 @@
     </fieldset>
       <br>
       <fieldset>
-        <legend> Imagenes y Enlaces </legend>
+        <legend> Imágenes y Enlaces </legend>
         <br><br>
         <Strong> ----- Enlaces ----- </Strong>
         <br><br>
@@ -111,64 +111,65 @@
     <div >
       <fieldset>
         <legend>Tablas y Busquedas</legend>
-          <div id="buscador">
-            <div id="idBuscador">
-              <input type="text" id="searchInput" placeholder="Buscar...">
-            </div>
+        
+        <h1 id="titulo">Datos de Clientes</h1>
+        <div id="buscador">
+          <div class="flex-container">
+            <input type="text" id="searchInput" class="idBuscador " placeholder="Buscar...">
           </div>
-          <table id="dataTable">
-              <thead>
-                  <tr>
-                      <th>Nombre</th>
-                      <th>Apellido</th>
-                      <th>Edad</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                      <td>Juan</td>
-                      <td>Pérez</td>
-                      <td>30</td>
-                  </tr>
-                  <tr>
-                      <td>María</td>
-                      <td>Gómez</td>
-                      <td>25</td>
-                  </tr>
-                  <tr>
-                      <td>Pedro</td>
-                      <td>López</td>
-                      <td>40</td>
-                  </tr>
-                  <tr>
-                      <td>Pedro</td>
-                      <td>López</td>
-                      <td>40</td>
-                  </tr>
-                  <tr>
-                      <td>Pedro</td>
-                      <td>López</td>
-                      <td>42</td>
-                  </tr>
-                  <tr>
-                      <td>Pedro</td>
-                      <td>López</td>
-                      <td>43</td>
-                  </tr>
-                  <tr>
-                      <td>Pedro</td>
-                      <td>López</td>
-                      <td>44</td>
-                  </tr>
-                  <tr>
-                      <td>Pedro</td>
-                      <td>López</td>
-                      <td>45</td>
-                  </tr>
-              </tbody>
-          </table>
+        </div>
+        <table id="dataTable">
+        <p id="total-registros"></p><br><br>
+          <thead>
+          
+            <tr>
+              <th>#</th>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Edad</th>
+              <th>Sexo</th>
+              <th>Estatura</th>
+              <th>Peso</th>
+              <th>Cuota</th>
+              <th>Entrenamiento</th>
+              <th>Antiguedad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?PHP
+            include "conexion.php";
+            
+            $sql = "SELECT * FROM `datos_clientes` WHERE estado_cliente = 1 ORDER BY id DESC LIMIT 50 ";
+            $result = mysqli_query($conexion,$sql);
+            while ($datos = mysqli_fetch_array($result)) { //INICIO - WHILE para visualizar los datos de la base de datos
+              $nombre = $datos['nombre'];
+              $apellido = $datos['apellido'];
+              $edad = $datos['edad'];
+              $sexo = $datos['sexo'];
+              $altura = $datos['altura_cliente'];
+              $peso = $datos['peso_cliente'];
+              $pago_mensual = $datos['pago_mensual'];
+              $tipo_entrenamiento = $datos['tipo_entrenamiento'];
+              $time_in_gym = $datos['time_in_gym'];
+            ?>  
+              <tr>
+                <td></td>
+                <td> <?php echo $nombre; ?> </td>
+                <td> <?php echo $apellido; ?> </td>
+                <td> <?php echo $edad; ?> </td>
+                <td> <?php echo $sexo; ?> </td>
+                <td> <?php echo $altura; ?> </td>
+                <td> <?php echo $peso; ?> </td>
+                <td> <?php echo $pago_mensual; ?> </td>
+                <td> <?php echo $tipo_entrenamiento; ?> </td>
+                <td> <?php if($time_in_gym == 1 ){ echo $time_in_gym. " Año"; }else { echo $time_in_gym. " Años"; } ?> </td>
+              </tr>
+              <?php  
+              } //FINAL - WHILE  para visualizar los datos de la base de datos
+              ?>
+          </tbody>
+        </table>
       </fieldset>
-
     </div>
     <script src="js/script.js"></script>
   </body>
