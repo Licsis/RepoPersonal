@@ -18,9 +18,8 @@
           <input type="submit" value="Calcular">
         </form>
       </section>
-
       <section>
-      <?php
+        <?php
           if (!empty($_POST)) {
             $numero1 = $_POST['numero1'];
             $numero2 = $_POST['numero2'];
@@ -36,7 +35,6 @@
           }else {
             echo "<h3>Sin Datos</h3>";
           ?>
-            
           <?php
           }
         ?>
@@ -48,9 +46,7 @@
       <legend>
         Etiquetas básicas en HTML 5
       </legend>
-      
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae maiores magnam aliquid nulla rerum suscipit vel sint ipsa, porro error dolores quibusdam nam iste illum laborum natus eos incidunt et.
-
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto molestias illum dolore.
         <br> <br>
         <strong> ----- Etiquetas de Títulos ----- </strong>
@@ -64,7 +60,6 @@
         <p> 
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae maiores magnam aliquid nulla rerum suscipit vel sint ipsa, porro error dolores quibusdam nam iste illum laborum natus eos incidunt etc.
         </p>
-
         <br><br>
         <strong> ----- Lista Desorganizada ----- </strong> 
         <ul>
@@ -119,7 +114,11 @@
           </div>
         </div>
         <table id="dataTable">
+<<<<<<< HEAD
         <p id="total-registros"></p><br><br>
+=======
+        <!--p id="total-registros"></!--p><br><br-->
+>>>>>>> c542bce27b0555238e566c9f11ccd551e9afeced
           <thead>
           
             <tr>
